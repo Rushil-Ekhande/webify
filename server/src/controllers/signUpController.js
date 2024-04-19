@@ -15,7 +15,7 @@ export const signUpController = async (req, res) => {
 
     // generating otp or verifyCode
 
-    const otp = Math.floor(100000 + Math.random() * 900000);
+    const otp = Math.floor(100000 + Math.random() * 900000).toString();
 
     if (ifUsernameIsTaken) {
       return res.json({
