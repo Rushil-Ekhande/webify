@@ -1,5 +1,6 @@
 import './config.js';
 import express from "express";
+import cookieParser from "cookie-parser"
 
 const app = express();
 const PORT = process.env.PORT;
@@ -7,6 +8,7 @@ const PORT = process.env.PORT;
 // middlewares
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+app.use(cookieParser());
 
 // connecting database and then running the server
 dbConnect()

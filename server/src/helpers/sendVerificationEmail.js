@@ -9,7 +9,7 @@ export const sendVerificationEmail = async( username, email, otp ) => {
             html: `<div>
                     <h1>Hello, ${username}</h1> <br>
                     <hr>
-                    <p>Thank you for registering to our website. Use the folowing code to verify your account.</p> <br><br>
+                    <p>Thank you for registering to our website. Use the folowing code to verify your account.</p><br><br>
                     <p><strong>Your Verification code is ${otp}</strong></p>
                 </div>`,
           });

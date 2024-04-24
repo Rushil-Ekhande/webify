@@ -1,6 +1,6 @@
 import userModel from "../models/UserModel.js";
 
-export const verificationCodeController = async(req, res) => {
+export const verificationCodeController = async (req, res) => {
     try {
         const { username, verifyCode } = req.body;
 
@@ -10,7 +10,9 @@ export const verificationCodeController = async(req, res) => {
         if(user){
             if(user.verifyCode == verifyCode){
                 user.isVerified = true;
+                console.log(user.isVerified);
                 console.log("in if");
+                await user.save();
                 return res.json({
                     success: true,
                     message: "User verified"
