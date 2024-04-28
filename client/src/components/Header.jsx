@@ -7,7 +7,8 @@ import Button from "./Button";
 import MenuSvg from "../assets/svg/MenuSvg";
 import { HamburgerMenu } from "./design/Header";
 import { useState } from "react";
-import { webifyLogo } from "../assets";
+import { webifyLogo, NewWebifyLogoNavbar } from "../assets";
+
 
 const Header = () => {
   const pathname = useLocation();
@@ -38,14 +39,14 @@ const Header = () => {
     >
       <div className="flex items-center justify-between px-5 lg:px-7.5 xl:px-10 max-lg:py-4">
         <Link className="block w-[12rem] xl:mr-8" to="/">
-          <img src={webifyLogo} width={190} height={40} alt="Logo" />
+          <img src={NewWebifyLogoNavbar} width={240} height={70} alt="WebigyLogo" />
           {/* <h4 className="h4">WebifyLogo</h4> */}
         </Link>
 
         <nav
           className={`${
             openNavigation ? "flex" : "hidden"
-          } justify-evenly fixed top-[5rem] left-0 right-0 bottom-0 bg-n-8 lg:static lg:flex lg:mx-auto lg:bg-transparent`}
+          } justify-evenly fixed top-[5rem] left-0 right-0 bottom-0 bg-n-8 lg:static lg:flex lg:mx-auto lg:bg-transparent lg:hidden`}
         >
           <div className="relative z-2 flex flex-col items-center justify-center m-auto lg:flex-row">
             {navigation.map((item) => (
@@ -67,9 +68,7 @@ const Header = () => {
           </div>
         <HamburgerMenu />
         </nav>
-        {/* <nav>
-        </nav> */}
-        {/* <div className="flex items-center">
+        <div className="flex items-center">
         <Link
           to="contact"
           className="button hidden mr-8 text-n-1/50 transition-colors hover:text-n-1 lg:block"
@@ -89,7 +88,7 @@ const Header = () => {
         >
           <MenuSvg openNavigation={openNavigation} />
         </Button>
-        </div> */}
+        </div>
       </div>
     </div>
   );

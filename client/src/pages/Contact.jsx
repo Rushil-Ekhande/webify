@@ -36,9 +36,9 @@ const Contact = () => {
   return (
     <Section crosses crossesOffset="lg:translate-y-[5.25rem]" id="signup">
       <div className="container flex w-full min-h-screen justify-center">
-        <div className="bg-n-7 w-full p-8 md:p-12 rounded-xl shadow-lg flex flex-col md:flex-row md:justify-between md:space-y-0 space-y-6 md:space-x-6 overflow-hidden">
+        <div className="bg-n-7 w-full p-8 md:p-12 rounded-xl shadow-lg flex flex-col md:flex-row md:justify-between md:space-y-0 space-y-6 md:space-x-6 overflow-hidden  max-md:flex-col-reverse">
           <div className="flex flex-col justify-between space-y-8">
-            <div className={"mt-4"}>
+            <div className={"mt-4 max-md:hidden"}>
               <h2 className="h2">Contact Us</h2>
               <p className="body-2 mt-4 text-n-4 max-w-lg">
                 Have a question or ready to get started? Fill out the form
@@ -51,8 +51,8 @@ const Contact = () => {
               </p>
             </div>
 
-            <div className="flex flex-col space-y-8">
-              <div className="inline-flex space-x-2 items-center">
+            <div className="flex flex-col space-y-8 max-md:mt-12">
+              <div className="inline-flex space-x-2 items-center max-md:mt-12">
                 <ion-icon name="mail" className="text-3xl"></ion-icon>
                 <span>webify@gmail.com</span>
               </div>
@@ -87,9 +87,22 @@ const Contact = () => {
             </div>
           </div>
 
-          <div className="w-1/2 relative">
+          <div className="lg:w-1/2 relative max-lg:w-full">
             <div className="absolute bg-violet-500 rounded-full w-52 h-52 z-5 -top-28 -right-28"></div>
             <div className="absolute bg-violet-500 rounded-full w-52 h-52 z-5 -left-28 -bottom-20"></div>
+
+            <div className={"my-4 max-md:block hidden"}>
+              <h2 className="h2">Contact Us</h2>
+              <p className="body-2 mt-4 text-n-4 max-w-lg">
+                Have a question or ready to get started? Fill out the form
+                below, and we'll be in touch soon. We're here to help with
+                anything you need!
+
+                <strong>
+                  If you want to work with us contact us now
+                </strong>
+              </p>
+            </div>
 
             <div className="relative z-10 bg-n-6 rounded-xl shadow-lg p-8 w-full">
               <form onSubmit={handleOnSubmit} className="mt-8 w-full space-y-4">

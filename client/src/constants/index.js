@@ -39,7 +39,7 @@ import {
   export const navigation = [
     {
       id: "0",
-      title: "contact",
+      title: "contact-us",
       url: "/contact",
     },
     {

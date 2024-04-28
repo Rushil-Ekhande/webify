@@ -7,8 +7,8 @@ import ButtonGradient from "./assets/svg/ButtonGradient";
 const Layout = () => {
   return (
     <div className="h-screen">
-    {/* <Header/> */}
-    <HamburgerNavbar/>
+    <Header/>
+    {/* <HamburgerNavbar/> */}
     <Outlet />
     <Footer/>
     <ButtonGradient />

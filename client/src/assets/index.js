@@ -76,6 +76,7 @@ import telegram from "./socials/telegram.svg";
 import twitter from "./socials/twitter.svg";
 
 import  webifyLogo from "../assets/webifyLogo.png"
+import  NewWebifyLogoNavbar from "../assets/NewWebifyLogoNavbar.png"
 import googleicon from "../assets/googleicon.svg"
 
 export {
@@ -149,4 +150,5 @@ export {
   twitter,
   webifyLogo,
   googleicon,
+  NewWebifyLogoNavbar,
 };
