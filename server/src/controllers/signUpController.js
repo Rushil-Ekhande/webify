@@ -47,20 +47,21 @@ export const signUpController = async (req, res) => {
         verifyCode: otp,
         verifyCodeExpiry: verifyCodeExpiry,
         isVerified: false,
-      })
+      });
       await user.save();
     }
 
+    console.log("send email start");
     const sendEmail = await sendVerificationEmail(username, email, otp);
-
-    if(sendEmail.error){
-        console.log(error);
+    console.log(sendEmail);
+    console.log("send email stop");
+    if (sendEmail.error) {
+      console.log(error);
     }
     res.json({
-        success: true,
-        message: "User registered successfully",
-    })
-
+      success: true,
+      message: "User registered successfully",
+    });
   } catch (error) {
     console.error(error);
     return res.json({

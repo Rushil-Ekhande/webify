@@ -8,12 +8,10 @@ import { ContactController } from "../controllers/ContactController.js";
 
 const router = express.Router();
 
-router.post("/sign-up", signUpController);
-router.post("/sign-up/verification-code", verificationCodeController);
-router.post("/sign-in", signInController);
+// router.post("/sign-up", signUpController);
+// router.post("/sign-up/verification-code", verificationCodeController);
+// router.post("/sign-in", signInController);
 router.post("/contact", ContactController);
 router.post("/dashboard", verifyToken, dashboardController);
 
-export {
-    router
-}
+export { router };
